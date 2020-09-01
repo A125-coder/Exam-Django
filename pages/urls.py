@@ -10,4 +10,9 @@ urlpatterns = [
     path('faq.html', views.faq, name="faq"),
     path('products.html', views.products, name="products"),
     path('product_details.html', views.product_details, name="product_details"),
+    path('product_summary.html', views.product_summary, name="product_summary"),
+    path('special_offer.html', views.special_offer, name="special_offer"),
+    path('register.html', views.register, name="register"),
+    path('login.html', views.login, name="login"),
+    path('compair.html', views.compair, name="compair"),
 ]

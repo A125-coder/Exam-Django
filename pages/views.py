@@ -25,3 +25,23 @@ def products(request):
 
 def product_details(request):
     return render(request, 'pages/product_details.html')
+
+
+def product_summary(request):
+    return render(request, 'pages/product_summary.html')
+
+
+def special_offer(request):
+    return render(request, 'pages/special_offer.html')
+
+
+def register(request):
+    return render(request, 'pages/register.html')
+
+
+def login(request):
+    return render(request, 'pages/login.html')
+
+
+def compair(request):
+    return render(request, 'pages/compair.html')
