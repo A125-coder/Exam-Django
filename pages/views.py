@@ -1,10 +1,12 @@
-from django.shortcuts import render
-
-# Create your views here.
+from django.shortcuts import render, get_object_or_404
+from .models import Products
 
 
 def index(request):
-    return render(request, 'pages/index.html')
+    products = {
+        "products": Products.objects.all()
+    }
+    return render(request, 'pages/index.html', products)
 
 
 def delivery(request):
@@ -23,8 +25,10 @@ def products(request):
     return render(request, 'pages/products.html')
 
 
-def product_details(request):
-    return render(request, 'pages/product_details.html')
+def product(request, product_id):
+    product = get_object_or_404(Products, pk=product_id)
+    context = {'product': product}
+    return render(request, 'pages/product_details.html', context=context)
 
 
 def product_summary(request):
