@@ -6,7 +6,7 @@
         <div class="container">
           <a href="register.html"
             ><img
-              style="width: 100%;"
+              style="width: 100%"
               src="{{ STATIC_PREFIX }}img/carousel/1.png"
               alt="special offers"
           /></a>
@@ -24,7 +24,7 @@
         <div class="container">
           <a href="register.html"
             ><img
-              style="width: 100%;"
+              style="width: 100%"
               src="{{ STATIC_PREFIX }}img/carousel/2.png"
               alt=""
           /></a>
@@ -148,7 +148,7 @@
           </li>
           <li class="subMenu">
             <a> CLOTHES [840] </a>
-            <ul style="display: none;">
+            <ul style="display: none">
               <li>
                 <a href="products.html"
                   ><i class="icon-chevron-right"></i>Women's Clothing (45)</a
@@ -188,7 +188,7 @@
           </li>
           <li class="subMenu">
             <a>FOOD AND BEVERAGES [1000]</a>
-            <ul style="display: none;">
+            <ul style="display: none">
               <li>
                 <a href="products.html"
                   ><i class="icon-chevron-right"></i>Angoves (35)</a
@@ -244,7 +244,7 @@
           />
           <div class="caption">
             <h5>Panasonic</h5>
-            <h4 style="text-align: center;">
+            <h4 style="text-align: center">
               <a class="btn" href="product_details.html">
                 <i class="icon-zoom-in"></i
               ></a>
@@ -264,7 +264,7 @@
           />
           <div class="caption">
             <h5>Kindle</h5>
-            <h4 style="text-align: center;">
+            <h4 style="text-align: center">
               <a class="btn" href="product_details.html">
                 <i class="icon-zoom-in"></i
               ></a>
@@ -600,11 +600,9 @@
               /></a>
               <div class="caption">
                 <h5>Product name</h5>
-                <p>
-                  Lorem Ipsum is simply dummy text.
-                </p>
+                <p>Lorem Ipsum is simply dummy text.</p>
 
-                <h4 style="text-align: center;">
+                <h4 style="text-align: center">
                   <a class="btn" href="product_details.html">
                     <i class="icon-zoom-in"></i
                   ></a>
@@ -623,10 +621,8 @@
               /></a>
               <div class="caption">
                 <h5>Product name</h5>
-                <p>
-                  Lorem Ipsum is simply dummy text.
-                </p>
-                <h4 style="text-align: center;">
+                <p>Lorem Ipsum is simply dummy text.</p>
+                <h4 style="text-align: center">
                   <a class="btn" href="product_details.html">
                     <i class="icon-zoom-in"></i
                   ></a>
@@ -645,10 +641,8 @@
               /></a>
               <div class="caption">
                 <h5>Product name</h5>
-                <p>
-                  Lorem Ipsum is simply dummy text.
-                </p>
-                <h4 style="text-align: center;">
+                <p>Lorem Ipsum is simply dummy text.</p>
+                <h4 style="text-align: center">
                   <a class="btn" href="product_details.html">
                     <i class="icon-zoom-in"></i
                   ></a>
@@ -667,10 +661,8 @@
               /></a>
               <div class="caption">
                 <h5>Product name</h5>
-                <p>
-                  Lorem Ipsum is simply dummy text.
-                </p>
-                <h4 style="text-align: center;">
+                <p>Lorem Ipsum is simply dummy text.</p>
+                <h4 style="text-align: center">
                   <a class="btn" href="product_details.html">
                     <i class="icon-zoom-in"></i
                   ></a>
@@ -689,10 +681,8 @@
               /></a>
               <div class="caption">
                 <h5>Product name</h5>
-                <p>
-                  Lorem Ipsum is simply dummy text.
-                </p>
-                <h4 style="text-align: center;">
+                <p>Lorem Ipsum is simply dummy text.</p>
+                <h4 style="text-align: center">
                   <a class="btn" href="product_details.html">
                     <i class="icon-zoom-in"></i
                   ></a>
@@ -707,15 +697,13 @@
           {% for product in products %}
           <li class="span3">
             <div class="thumbnail">
-              <a href="product_details/"
+              <a href="{% url 'product' product.id %}"
                 ><img src="{{product.photo.url}}" alt=""
               /></a>
               <div class="caption">
                 <h5>{{product.product_title}}</h5>
-                <p>
-                  {{product.description}}
-                </p>
-                <h4 style="text-align: center;">
+                <p>{{product.description}}</p>
+                <h4 style="text-align: center">
                   <a class="btn" href="{% url 'product' product.id %}">
                     <i class="icon-zoom-in"></i
                   ></a>
